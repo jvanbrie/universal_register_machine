@@ -1,0 +1,3 @@
+zero r k l
+dec r 1 k
+inc r l

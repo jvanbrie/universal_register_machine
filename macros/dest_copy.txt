@@ -1,0 +1,3 @@
+dest_copy r s k
+dec r 1 k
+inc s 0

@@ -1,0 +1,66 @@
+Register Machine Code
+
+inc r k (* increment r and goto k *)
+dec r k l (* if r > 0 decrement and goto k, else goto l *)
+halt
+
+# registers A,B,C will be used for holding information relevant to the macros
+
+copy r s k
+dec r 1 3
+inc A 2
+inc s 0
+dec A 4 k
+inc r 3
+
+copy r s k (* copy from r to s, goto k *)
+0 dec r 1 3
+1 inc A 2
+2 inc s 0
+3 dec A 4 k
+4 inc r 3
+
+dest_copy r s k (* copy from r to s, destructively, goto k *)
+0 dec r 1 k
+1 inc s 0
+
+zero r k l (* if r = 0 goto k else goto l *)
+0 dec r 1 k
+1 inc r l
+
+pop r s k (* r is a seq, place r[0] in s, r[1:] in r, goto k *)
+0 dec r  1  3
+1 dec r  2  5
+2 inc A  0
+# A contains r / 2, r was even
+3 inc s 5
+4 dest_copy A r 0
+# B contains log(original r)
+# x = B, y = A from seq formula
+5 dest_copy A r k
+
+pop r s k
+dec r  1  3
+dec r  2  5
+inc A  0
+inc s 4
+dest_copy A r 0
+dest_copy A r k
+
+read r t s k (* place tth element of r into s, goto k *)
+copy r D 1
+dec t 2 9
+dec D 3 5
+dec D 4 7
+inc B 2
+inc C 5
+dest_copy B D 2
+dest_copy B D 1
+dest_copy C s k
+
+
+4 dec Y  5  8
+5 inc Y  6
+6 dec Y  7  0
+7 inc X  6
+8 halt
