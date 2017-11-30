@@ -1,10 +1,5 @@
-
-
 import argparse
 verboseprint = lambda *a, **k: None
-
-
-
 
 def main(args):
 	global verboseprint

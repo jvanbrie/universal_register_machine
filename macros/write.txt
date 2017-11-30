@@ -1,3 +1,4 @@
+write r t s k
 dec t 1 22
 dec r 2 4 
 dec r 3 7 
@@ -61,4 +62,4 @@ inc mac_mult_2_A 57
 dec mac_mult_2_A 61 56 
 inc mac_pair_A 60 
 dec mac_pair_A 63 42 
-inc r 62 
+inc r 62

@@ -1,17 +1,22 @@
 read r t s k
-dec r 1 3
-inc A 2
-inc D 0
-dec A 4 5
-inc r 3
-dec t 6 14
-dec D 7 9
-dec D 8 12
-inc B 6
-inc C 9
-dec B 1 6
-inc D 0
-dec B 1 5
-inc D 0
-dec C 1 k
-inc s 0
+dec r 1 3 
+inc A 2 
+inc D 0 
+dec A 4 9 
+inc r 3 
+dec t 6 13 
+dec D 7 9 
+dec D 8 11 
+inc B 6 
+dec B 10 11 
+inc D 9 
+dec B 12 9 
+inc D 11 
+dec D 14 16  
+dec D 15 19  
+inc A 13  
+inc s 17  
+dec A 18 13 
+inc D 17 
+dec A 20 k 
+inc D 19 

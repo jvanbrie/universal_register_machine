@@ -1,12 +1,13 @@
 
 import argparse
+import re
 verboseprint = lambda *a, **k: None
 
 def main(args):
 	global verboseprint
 	verboseprint = print if args.v else lambda *a, **k: None
 	
-	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt"]
+	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt","push.txt"]
 
 	command_file = open(args.input,'r')
 	output_file = open(args.output,'w+')
@@ -68,6 +69,8 @@ def main(args):
 		one_command = command_file.readline()
 
 
+
+
 	# write new no macro file
 	print(commands)
 	command_file = open(args.input,'r')
@@ -79,46 +82,114 @@ def main(args):
 		command_inputs = one_command.split()
 		print(command_inputs)
 		cur_macro = command_inputs[0]
+		index_offset = commands[command_index]
+
+		for command_ind in range(len(command_inputs)):
+			try:
+				command_inputs[command_ind] = str(commands[int(command_inputs[command_ind])])
+			except:
+				pass
+
+
+		# try involves macro
 		try:
 			macros[cur_macro]
-		except:
-			for word_ind in range(len(command_inputs)):
-				replaced_word = command_inputs[word_ind]
+			cur_macro_string = macros[cur_macro][1]
+			#handles integers in macro
+			cur_macro_list = re.split(" ",cur_macro_string)
+			for word_ind in range(len(cur_macro_list)):
+				word = cur_macro_list[word_ind]
+				try:
+					word = str(int(word) + index_offset)
+				except:
+					pass
+				cur_macro_list[word_ind] = word
+			cur_macro_string = ' '.join(cur_macro_list)
+
+			# handles macro variables
+			for var_ind in range(len(macros[cur_macro][0])):
+				# plus one due to the first value in command_inputs being the macro name rather than a variable
+				replaced_word = command_inputs[var_ind + 1]
 				try:
 					replaced_word = str(commands[int(replaced_word)])
 				except:
 					pass
-				command_inputs[word_ind] = replaced_word
-			output_file.write(' '.join(command_inputs) + '\n')
-			one_command = command_file.readline()
-			command_index += 1
-			continue
-		cur_macro_string = macros[cur_macro][1]
-		index_offset = commands[command_index]
-
-		print("new macro")
-
-		for var_ind in range(len(macros[cur_macro][0])):
-			# plus one due to the first value in command_inputs being the macro name rather than a variable
-			print(macros[cur_macro][0][var_ind])
-			print(command_inputs[var_ind + 1])
-			replaced_word = command_inputs[var_ind + 1]
-			try:
-				replaced_word = str(commands[int(replaced_word)])
-			except:
-				pass
-			print(replaced_word)
-			cur_macro_string = cur_macro_string.replace(macros[cur_macro][0][var_ind], replaced_word)
+				replaced_word = ' ' + replaced_word
+				cur_macro_string = cur_macro_string.replace(' ' + macros[cur_macro][0][var_ind], replaced_word)
 		
-		print(cur_macro_string)
-		cur_macro_list = cur_macro_string.split(' ')
 
+			output_file.write(cur_macro_string + '\n')
+		except:
+			print(' '.join(command_inputs))
+			output_file.write(' '.join(command_inputs) + '\n')
 
-		cur_macro_string = ' '.join(cur_macro_list)
-		output_file.write(cur_macro_string + '\n')
 		one_command = command_file.readline()
 
 		command_index += 1
+
+
+	# write new no macro file
+	# print(commands)
+	# command_file = open(args.input,'r')
+	# command_index = 0
+	# one_command = command_file.readline()
+	# while(one_command != ''):
+	# 	if(one_command[-1] == '\n'):
+	# 		one_command = one_command[:-1]
+	# 	command_inputs = one_command.split()
+	# 	print(command_inputs)
+	# 	cur_macro = command_inputs[0]
+
+	# 	#handles non-macro lines
+	# 	try:
+	# 		macros[cur_macro]
+	# 	except:
+	# 		for word_ind in range(len(command_inputs)):
+	# 			replaced_word = command_inputs[word_ind]
+	# 			try:
+	# 				replaced_word = str(commands[int(replaced_word)])
+	# 			except:
+	# 				pass
+	# 			command_inputs[word_ind] = replaced_word
+	# 		output_file.write(' '.join(command_inputs) + '\n')
+	# 		one_command = command_file.readline()
+	# 		command_index += 1
+	# 		continue
+	# 	cur_macro_string = macros[cur_macro][1]
+	# 	index_offset = commands[command_index]
+
+	# 	#handles integers in macro
+	# 	cur_macro_list = cur_macro_string.split(' ')
+	# 	for word_ind in range(len(cur_macro_list)):
+	# 		word = cur_macro_list[word_ind]
+	# 		try:
+	# 			int(word)
+	# 			print("This word IS an int: " + word)
+	# 			word = str(int(word) + index_offset)
+	# 		except:
+	# 			print("This word is not an int: " + word)
+	# 		cur_macro_list[word_ind] = word
+	# 	cur_macro_string = ' '.join(cur_macro_list)
+
+	# 	# handles macro variables
+	# 	for var_ind in range(len(macros[cur_macro][0])):
+	# 		# plus one due to the first value in command_inputs being the macro name rather than a variable
+	# 		replaced_word = command_inputs[var_ind + 1]
+	# 		try:
+	# 			replaced_word = str(commands[int(replaced_word)])
+	# 		except:
+	# 			pass
+	# 		replaced_word = ' ' + replaced_word
+	# 		cur_macro_string = cur_macro_string.replace(' ' + macros[cur_macro][0][var_ind], replaced_word)
+		
+	# 	print(cur_macro_string)
+	# 	print(index_offset)
+
+	# 	print("new macro")
+	# 	output_file.write(cur_macro_string + '\n')
+	# 	one_command = command_file.readline()
+
+	# 	command_index += 1
 
 	output_file.close()
 
