@@ -1,3 +1,3 @@
-zero r k l
-dec r 1 k
-inc r l
+zero mac_zero_r mac_zero_k mac_zero_l  
+dec mac_zero_r 1 mac_zero_k 
+inc mac_zero_r mac_zero_l 

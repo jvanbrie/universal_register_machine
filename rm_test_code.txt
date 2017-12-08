@@ -1,9 +1,19 @@
-dec t 1 4 
-pop r mac_write_A 2 
-push mac_write_seq mac_write_A 3 
-dec mac_write_A 4 0 
-pop r mac_write_A 5 
-push r s 6 
-zero mac_write_seq 7 k 
-pop mac_write_seq mac_write_A 8 
-push r mac_write_A 6 
+inc apple 1
+inc apple 2
+inc apple 3
+inc apple 4
+inc apple2 5
+inc apple2 6
+inc apple3 7
+push bat apple 8
+push bat apple2 9
+read bat apple3 apple4 10
+inc apple3 11
+read bat apple3 apple4 12
+read bat apple5 apple6 13
+inc apple3 14
+inc apple7 15
+inc apple7 16
+inc apple7 17
+write bat apple3 apple7 18
+halt

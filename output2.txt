@@ -1,0 +1,32 @@
+inc apple 1
+inc apple 2
+inc apple 3
+inc apple 4
+inc apple2 5
+inc apple2 6
+inc apple3 7
+dec bat 8 10 
+inc mac_pair_A 9 
+inc mac_pair_A 7 
+inc mac_pair_A 11 
+dec apple 12 17 
+dec mac_pair_A 13 15 
+inc mac_mult_2_A 14 
+inc mac_mult_2_A 12 
+dec mac_mult_2_A 16 11 
+inc mac_pair_A 15 
+dec mac_pair_A 18 19 
+inc bat 17 
+dec bat 20 22 
+inc mac_pair_A 21 
+inc mac_pair_A 19 
+inc mac_pair_A 23 
+dec apple2 24 29 
+dec mac_pair_A 25 27 
+inc mac_mult_2_A 26 
+inc mac_mult_2_A 24 
+dec mac_mult_2_A 28 23 
+inc mac_pair_A 27 
+dec mac_pair_A 30 31 
+inc bat 29 
+halt

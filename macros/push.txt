@@ -1,13 +1,13 @@
-push r s k
-dec r 1 3 
+push mac_push_r mac_push_s mac_push mac_push_k 
+dec mac_push_r 1 3 
 inc mac_pair_A 2 
 inc mac_pair_A 0 
 inc mac_pair_A 4 
-dec s 5 10 
+dec mac_push_s 5 10 
 dec mac_pair_A 6 8 
 inc mac_mult_2_A 7 
 inc mac_mult_2_A 5 
 dec mac_mult_2_A 9 4 
 inc mac_pair_A 8 
-dec mac_pair_A 11 k 
-inc r 10 
+dec mac_pair_A 11 mac_push mac_push_k 
+inc mac_push_r 10 

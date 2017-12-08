@@ -37,7 +37,7 @@ def main(args):
 
 	while(True):
 		command = commands[line]
-		if command == 'hal':
+		if command == 'halt':
 			break
 		command_inputs = command.split()
 		verboseprint(command_inputs)

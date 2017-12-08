@@ -7,7 +7,7 @@ def main(args):
 	global verboseprint
 	verboseprint = print if args.v else lambda *a, **k: None
 	
-	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt","push.txt"]
+	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt","push.txt","write.txt"]
 
 	command_file = open(args.input,'r')
 	output_file = open(args.output,'w+')
@@ -84,12 +84,6 @@ def main(args):
 		cur_macro = command_inputs[0]
 		index_offset = commands[command_index]
 
-		for command_ind in range(len(command_inputs)):
-			try:
-				command_inputs[command_ind] = str(commands[int(command_inputs[command_ind])])
-			except:
-				pass
-
 
 		# try involves macro
 		try:
@@ -120,6 +114,11 @@ def main(args):
 
 			output_file.write(cur_macro_string + '\n')
 		except:
+			for command_ind in range(len(command_inputs)):
+				try:
+					command_inputs[command_ind] = str(commands[int(command_inputs[command_ind])])
+				except:
+					pass
 			print(' '.join(command_inputs))
 			output_file.write(' '.join(command_inputs) + '\n')
 

@@ -1,0 +1,14 @@
+copy E R 1 
+write R p x 2 
+read E p I 3 
+pop I r 4 
+zero I 13 5 
+pop I p 6 
+read R r x 7 
+zero I 8 9 
+inc x 12 
+zero x 10 11 
+pop I p 2 
+dec x 12 12 
+write R r x 2 
+halt
