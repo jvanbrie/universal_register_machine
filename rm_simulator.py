@@ -34,20 +34,19 @@ def main(args):
 		print (registers)
 
 	line = 0
+	print_count = 0
 
 	while(True):
 		command = commands[line]
 		if command == 'halt':
 			break
 		command_inputs = command.split()
-		verboseprint(command_inputs)
+		# verboseprint(command_inputs)
 		if(len(command_inputs) == 3):
 			try:
 				registers[command_inputs[1]] += 1
 			except:
 				registers[command_inputs[1]] = 1
-			if(args.v):
-				print_state(line)
 			line = (int(command_inputs[2]))
 		else:
 			try:
@@ -59,6 +58,11 @@ def main(args):
 			else:
 				registers[command_inputs[1]] -= 1
 				line = (int(command_inputs[2]))
+		print_count += 1
+		if(print_count >= 100000):
+			verboseprint(command_inputs)
+			print_state(line)
+			# print_count = 0
 	print("Final state:")
 	print_state(0)
 

@@ -1,9 +1,6 @@
-dec t 1 4 
-pop r mac_write_A 2 
-push mac_write_seq mac_write_A 3 
-dec mac_write_A 3 0 
-pop r mac_write_C 5 
-push r s 6 
-zero mac_write_seq k 7 
-pop mac_write_seq mac_write_B 8 
-push r mac_write_B 6 
+read mac_read_r mac_read_t mac_read_s mac_read_k 
+copy mac_read_r mac_read_temp 1 
+copy mac_read_t mac_read_ind 2 
+dec mac_read_ind 3 4 
+pop mac_read_temp mac_read_void 2 
+pop mac_read_temp mac_read_s mac_read_k 

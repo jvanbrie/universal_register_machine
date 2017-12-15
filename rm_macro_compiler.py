@@ -7,7 +7,7 @@ def main(args):
 	global verboseprint
 	verboseprint = print if args.v else lambda *a, **k: None
 	
-	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt","push.txt","write.txt"]
+	macro_files = ["copy.txt","zero.txt","pop.txt","dest_copy.txt","read.txt","mult_2.txt","push.txt","write.txt", "universal_register_machine.txt"]
 
 	command_file = open(args.input,'r')
 	output_file = open(args.output,'w+')
@@ -108,8 +108,8 @@ def main(args):
 					replaced_word = str(commands[int(replaced_word)])
 				except:
 					pass
-				replaced_word = ' ' + replaced_word
-				cur_macro_string = cur_macro_string.replace(' ' + macros[cur_macro][0][var_ind], replaced_word)
+				replaced_word = ' ' + replaced_word + ' '
+				cur_macro_string = cur_macro_string.replace(' ' + macros[cur_macro][0][var_ind] + ' ', replaced_word)
 		
 
 			output_file.write(cur_macro_string + '\n')

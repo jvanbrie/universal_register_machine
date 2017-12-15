@@ -1,0 +1,4 @@
+copy mac_read_r mac_read_temp 1 
+dec mac_read_t 2 3 
+pop mac_read_temp mac_read_void 1 
+pop mac_read_temp mac_read_s mac_read_k 

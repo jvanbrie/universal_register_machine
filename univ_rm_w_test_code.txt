@@ -1,0 +1,34 @@
+inc one 1
+inc one1 2
+inc two 3
+push E zero 4
+push first_seq one 5
+push first_seq zero 6
+push E first_seq 7
+inc poop3 8
+inc poop3 9
+inc poop3 10
+inc poop3 11
+inc poop3 12
+inc poop3 13
+inc poop3 14
+inc poop3 15
+inc poop3 16 
+inc poop3 17
+read E p I 18 
+pop I r 19 
+zero I 26 20 
+pop I p 21 
+copy R mac_read_temp 22 
+copy r mac_read_ind 23 
+dec mac_read_ind 24 25 
+pop mac_read_temp mac_read_void 23 
+pop mac_read_temp x 26 
+zero I 27 28 
+inc x 31 
+zero x 29 30 
+pop I p 17 
+dec x 12 12 
+write R r x 17 
+halt 
+halt 

@@ -3,9 +3,9 @@ dec mac_pop_r 1 mac_pop_k
 inc mac_pop_r 2 
 dec mac_pop_r 3 5 
 dec mac_pop_r 4 8 
-inc A 2 
+inc mac_pop_A 2 
 inc mac_pop_s 6 
-dec A 7 2 
+dec mac_pop_A 7 2 
 inc mac_pop_r 6 
-dec A 9 mac_pop_k  
+dec mac_pop_A 9 mac_pop_k  
 inc mac_pop_r 8 

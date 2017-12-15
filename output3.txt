@@ -1,0 +1,26 @@
+dec mac_read_r 1 3 
+inc macro_copy_temp 2 
+inc mac_read_temp 0 
+dec macro_copy_temp 4 5 
+inc mac_read_r 3 
+dec mac_read_t 6 16 
+dec mac_read_temp 7 5  
+inc mac_read_temp 8 
+dec mac_read_temp 9 11 
+dec mac_read_temp 10 14 
+inc mac_pop_A 8 
+inc mac_read_void 12 
+dec mac_pop_A 13 8 
+inc mac_read_temp 12 
+dec mac_pop_A 15 5  
+inc mac_read_temp 14 
+dec mac_read_temp 17 mac_read_k  
+inc mac_read_temp 18 
+dec mac_read_temp 19 21 
+dec mac_read_temp 20 24 
+inc mac_pop_A 18 
+inc mac_read_s 22 
+dec mac_pop_A 23 18 
+inc mac_read_temp 22 
+dec mac_pop_A 25 mac_read_k  
+inc mac_read_temp 24 

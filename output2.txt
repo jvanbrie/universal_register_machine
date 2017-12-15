@@ -1,32 +1,299 @@
-inc apple 1
-inc apple 2
-inc apple 3
-inc apple 4
-inc apple2 5
-inc apple2 6
-inc apple3 7
-dec bat 8 10 
-inc mac_pair_A 9 
-inc mac_pair_A 7 
-inc mac_pair_A 11 
-dec apple 12 17 
-dec mac_pair_A 13 15 
-inc mac_mult_2_A 14 
-inc mac_mult_2_A 12 
-dec mac_mult_2_A 16 11 
-inc mac_pair_A 15 
-dec mac_pair_A 18 19 
-inc bat 17 
-dec bat 20 22 
-inc mac_pair_A 21 
-inc mac_pair_A 19 
-inc mac_pair_A 23 
-dec apple2 24 29 
-dec mac_pair_A 25 27 
+inc E 1
+dec E 2 4 
+inc mac_mult_2_A 3 
+inc mac_mult_2_A 1 
+dec mac_mult_2_A 5 6  
+inc E 4 
+dec E 7 9 
+inc mac_mult_2_A 8 
+inc mac_mult_2_A 6 
+dec mac_mult_2_A 10 11  
+inc E 9 
+dec E 12 14 
+inc mac_mult_2_A 13 
+inc mac_mult_2_A 11 
+dec mac_mult_2_A 15 16  
+inc E 14 
+dec E 17 19 
+inc mac_mult_2_A 18 
+inc mac_mult_2_A 16 
+dec mac_mult_2_A 20 21  
+inc E 19 
+dec E 22 24 
+inc mac_mult_2_A 23 
+inc mac_mult_2_A 21 
+dec mac_mult_2_A 25 26  
+inc E 24 
+dec E 27 29 
+inc mac_mult_2_A 28 
 inc mac_mult_2_A 26 
-inc mac_mult_2_A 24 
-dec mac_mult_2_A 28 23 
-inc mac_pair_A 27 
-dec mac_pair_A 30 31 
-inc bat 29 
-halt
+dec mac_mult_2_A 30 31  
+inc E 29 
+inc pow 32
+inc what 33
+dec what 34 36 
+inc mac_mult_2_A 35 
+inc mac_mult_2_A 33 
+dec mac_mult_2_A 37 38  
+inc what 36 
+dec what 39 41 
+inc mac_mult_2_A 40 
+inc mac_mult_2_A 38 
+dec mac_mult_2_A 42 43  
+inc what 41 
+dec what 44 46 
+inc mac_mult_2_A 45 
+inc mac_mult_2_A 43 
+dec mac_mult_2_A 47 48  
+inc what 46 
+dec what 49 51 
+inc mac_mult_2_A 50 
+inc mac_mult_2_A 48 
+dec mac_mult_2_A 52 53  
+inc what 51 
+dec what 54 56 
+inc mac_mult_2_A 55 
+inc mac_mult_2_A 53 
+dec mac_mult_2_A 57 58  
+inc what 56 
+dec what 59 60 
+inc E 58 
+inc poop 61
+dec E 62 64 
+inc macro_copy_temp 63 
+inc R 61 
+dec macro_copy_temp 65 66 
+inc E 64 
+dec p 67 90 
+dec R 68 77  
+inc R 69 
+dec R 70 72 
+dec R 71 75 
+inc mac_write_A1 69 
+inc mac_write_A 73 
+dec mac_write_A1 74 69 
+inc R 73 
+dec mac_write_A1 76 77 
+inc R 75 
+dec mac_write_list 78 80 
+inc mac_pair_A 79 
+inc mac_pair_A 77 
+inc mac_pair_A 81 
+dec mac_write_A 82 87 
+dec mac_pair_A 83 85 
+inc mac_mult_2_A 84 
+inc mac_mult_2_A 82 
+dec mac_mult_2_A 86 81 
+inc mac_pair_A 85 
+dec mac_pair_A 88 89 
+inc mac_write_list 87 
+dec mac_write_A 89 66 
+dec R 91 100 
+inc R 92 
+dec R 93 95 
+dec R 94 98 
+inc mac_write_A2 92 
+inc mac_write_C 96 
+dec mac_write_A2 97 92 
+inc R 96 
+dec mac_write_A2 99 100 
+inc R 98 
+dec R 101 103 
+inc mac_pair_A 102 
+inc mac_pair_A 100 
+inc mac_pair_A 104 
+dec x 105 110 
+dec mac_pair_A 106 108 
+inc mac_mult_2_A 107 
+inc mac_mult_2_A 105 
+dec mac_mult_2_A 109 104 
+inc mac_pair_A 108 
+dec mac_pair_A 111 112 
+inc R 110 
+dec mac_write_list 113 137 
+inc mac_write_list 114 
+dec mac_write_list 115 124 
+inc mac_write_list 116 
+dec mac_write_list 117 119 
+dec mac_write_list 118 122 
+inc mac_write_A3 116 
+inc mac_write_B 120 
+dec mac_write_A3 121 116 
+inc mac_write_list 120 
+dec mac_write_A3 123 124 
+inc mac_write_list 122 
+dec R 125 127 
+inc mac_pair_A 126 
+inc mac_pair_A 124 
+inc mac_pair_A 128 
+dec mac_write_B 129 134 
+dec mac_pair_A 130 132 
+inc mac_mult_2_A 131 
+inc mac_mult_2_A 129 
+dec mac_mult_2_A 133 128 
+inc mac_pair_A 132 
+dec mac_pair_A 135 112 
+inc R 134  
+dec mac_write_C 137 137 
+dec E 138 140 
+inc macro_copy_temp 139 
+inc mac_read_temp 137 
+dec macro_copy_temp 141 142 
+inc E 140 
+dec p 143 298
+dec mac_read_temp 144 142  
+inc mac_read_temp 145 
+dec mac_read_temp 146 148 
+dec mac_read_temp 147 151 
+inc mac_pop_A 145 
+inc mac_read_void 149 
+dec mac_pop_A 150 145 
+inc mac_read_temp 149 
+dec mac_pop_A 152 142  
+inc mac_read_temp 151 
+dec mac_read_temp 154 163  
+inc mac_read_temp 155 
+dec mac_read_temp 156 158 
+dec mac_read_temp 157 161 
+inc mac_pop_A 155 
+inc I 159 
+dec mac_pop_A 160 155 
+inc mac_read_temp 159 
+dec mac_pop_A 162 163  
+inc mac_read_temp 161 
+dec I 164 173  
+inc I 165 
+dec I 166 168 
+dec I 167 171 
+inc mac_pop_A 165 
+inc r 169 
+dec mac_pop_A 170 165 
+inc I 169 
+dec mac_pop_A 172 173  
+inc I 171 
+dec I 174 298 
+inc I 175 
+dec I 176 185  
+inc I 177 
+dec I 178 180 
+dec I 179 183 
+inc mac_pop_A 177 
+inc p 181 
+dec mac_pop_A 182 177 
+inc I 181 
+dec mac_pop_A 184 185  
+inc I 183 
+dec R 186 188 
+inc macro_copy_temp 187 
+inc mac_read_temp 185 
+dec macro_copy_temp 189 190 
+inc R 188 
+dec r 191 16
+dec mac_read_temp 192 190  
+inc mac_read_temp 193 
+dec mac_read_temp 194 196 
+dec mac_read_temp 195 199 
+inc mac_pop_A 193 
+inc mac_read_void 197 
+dec mac_pop_A 198 193 
+inc mac_read_temp 197 
+dec mac_pop_A 200 190  
+inc mac_read_temp 199 
+dec mac_read_temp 202 211  
+inc mac_read_temp 203 
+dec mac_read_temp 204 206 
+dec mac_read_temp 205 209 
+inc mac_pop_A 203 
+inc x 207 
+dec mac_pop_A 208 203 
+inc mac_read_temp 207 
+dec mac_pop_A 210 211  
+inc mac_read_temp 209 
+dec I 212 213 
+inc I 214 
+inc x 166
+dec x 215 216 
+inc x 226 
+dec I 217 137  
+inc I 218 
+dec I 219 221 
+dec I 220 224 
+inc mac_pop_A 218 
+inc p 222 
+dec mac_pop_A 223 218 
+inc I 222 
+dec mac_pop_A 225 137  
+inc I 224 
+dec x 227 166
+dec r 228 251 
+dec R 229 238  
+inc R 230 
+dec R 231 233 
+dec R 232 236 
+inc mac_write_A1 230 
+inc mac_write_A 234 
+dec mac_write_A1 235 230 
+inc R 234 
+dec mac_write_A1 237 238 
+inc R 236 
+dec mac_write_list 239 241 
+inc mac_pair_A 240 
+inc mac_pair_A 238 
+inc mac_pair_A 242 
+dec mac_write_A 243 248 
+dec mac_pair_A 244 246 
+inc mac_mult_2_A 245 
+inc mac_mult_2_A 243 
+dec mac_mult_2_A 247 242 
+inc mac_pair_A 246 
+dec mac_pair_A 249 250 
+inc mac_write_list 248 
+dec mac_write_A 250 227 
+dec R 252 261 
+inc R 253 
+dec R 254 256 
+dec R 255 259 
+inc mac_write_A2 253 
+inc mac_write_C 257 
+dec mac_write_A2 258 253 
+inc R 257 
+dec mac_write_A2 260 261 
+inc R 259 
+dec R 262 264 
+inc mac_pair_A 263 
+inc mac_pair_A 261 
+inc mac_pair_A 265 
+dec x 266 271 
+dec mac_pair_A 267 269 
+inc mac_mult_2_A 268 
+inc mac_mult_2_A 266 
+dec mac_mult_2_A 270 265 
+inc mac_pair_A 269 
+dec mac_pair_A 272 273 
+inc R 271 
+dec mac_write_list 274 298 
+inc mac_write_list 275 
+dec mac_write_list 276 285 
+inc mac_write_list 277 
+dec mac_write_list 278 280 
+dec mac_write_list 279 283 
+inc mac_write_A3 277 
+inc mac_write_B 281 
+dec mac_write_A3 282 277 
+inc mac_write_list 281 
+dec mac_write_A3 284 285 
+inc mac_write_list 283 
+dec R 286 288 
+inc mac_pair_A 287 
+inc mac_pair_A 285 
+inc mac_pair_A 289 
+dec mac_write_B 290 295 
+dec mac_pair_A 291 293 
+inc mac_mult_2_A 292 
+inc mac_mult_2_A 290 
+dec mac_mult_2_A 294 289 
+inc mac_pair_A 293 
+dec mac_pair_A 296 273 
+inc R 295  
+dec mac_write_C 298 137 
+halt 

@@ -1,19 +1,7 @@
 inc apple 1
-inc apple 2
-inc apple 3
-inc apple 4
-inc apple2 5
-inc apple2 6
-inc apple3 7
-push bat apple 8
-push bat apple2 9
-read bat apple3 apple4 10
-inc apple3 11
-read bat apple3 apple4 12
-read bat apple5 apple6 13
-inc apple3 14
-inc apple7 15
-inc apple7 16
-inc apple7 17
-write bat apple3 apple7 18
+push bat apple 2
+push bat apple2 3
+pop bat apple3 4
+pop bat apple4 5
+write R p x 7
 halt
