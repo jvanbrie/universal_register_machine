@@ -1,0 +1,18 @@
+FILES:
+
+NOTE TO KLAUS:
+	Currently the universal register machine can correctly do increments. Debugging this register machine has been extremely challenging. I'm trying to work on improvements to efficiency in order to try larger machines, but everything else takes forever. I also may have incorrectly created one of the macros - I've included a lot of my temp files to show I wasn't just goofing off, I just have had significant trouble debugging this. I will also push another version when I get this working tomorrow. If you can't accept it that's fine, I just want to make it work either way.
+
+rm_simulator.py
+	a register machine simulator in python
+
+convert_rm_to_seq.py
+	a utility function that converts a sequence to an individual number
+
+convert_rm_to_better_seq.py
+	Attempting an improvement to the seq that has 0s between entries instead of nested sequences. This makes the sequence numbers much smaller and only minimal changes to the input number representing the register machine.
+
+macros
+	folder containing macros necessary for the project
+
+

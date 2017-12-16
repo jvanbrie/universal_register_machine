@@ -2,22 +2,22 @@ inc one 1
 inc one1 2
 inc two 3
 push E zero 4
-push first_seq one 5
+push first_seq two 5
 push first_seq zero 6
-push E first_seq 7
-inc poop3 8
-inc poop3 9
-inc poop3 10
-inc poop3 11
-inc poop3 12
+inc poop3 7
+inc one 8
+push second_seq one 9
+push second_seq zero 10
+push E second_seq 11
+push E first_seq 12
 inc poop3 13
 inc poop3 14
-inc poop3 15
-inc poop3 16 
-inc poop3 17
+inc p 15
+inc shit 16 
+dec x 16 17 
 read E p I 18 
 pop I r 19 
-zero I 26 20 
+zero I 41 20 
 pop I p 21 
 copy R mac_read_temp 22 
 copy r mac_read_ind 23 
@@ -27,8 +27,17 @@ pop mac_read_temp x 26
 zero I 27 28 
 inc x 31 
 zero x 29 30 
-pop I p 17 
+pop I p 15 
 dec x 12 12 
-write R r x 17 
+dec r 32 35 
+pop R mac_write_A 33 
+push mac_write_seq mac_write_A 34 
+dec mac_write_A 3 31 
+pop R mac_write_C 36 
+push R x 37 
+zero mac_write_seq 15 38 
+pop mac_write_seq mac_write_B 39 
+push R mac_write_B 37 
 halt 
+inc shit2 42
 halt 

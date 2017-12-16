@@ -30,8 +30,8 @@ def main(args):
 		one_command = command_file.readline()
 
 	def print_state(line):
-		print ("State after line %d:" % line)
-		print (registers)
+		verboseprint("State after line %d:" % line)
+		verboseprint(registers)
 
 	line = 0
 	print_count = 0
@@ -59,12 +59,13 @@ def main(args):
 				registers[command_inputs[1]] -= 1
 				line = (int(command_inputs[2]))
 		print_count += 1
-		if(print_count >= 100000):
+		if(print_count >= 10000):
 			verboseprint(command_inputs)
 			print_state(line)
 			# print_count = 0
-	print("Final state:")
-	print_state(0)
+	verboseprint("Final state:")
+	print("State after line %d:" % line)
+	print(registers)
 
 
 
